@@ -1,0 +1,55 @@
+<html>
+
+<title>Calculadora Juros Compostos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<body>
+
+<div style="text-align:center;gravity:center;">
+
+<h4>Calculadora Juros Compostos</h4>
+
+<form>
+
+Capital<input id="c" type="text"><br>
+Taxa<input id="i" type="text"><br>
+Tempo<input id="t" type="text"><br>
+
+Resultado:<text id="m"></text>
+
+
+</form>
+
+<button onclick="calc()">Calcular</button>
+
+</div>
+
+</body>
+
+<script>
+
+function calc(){
+
+    var c = document.getElementById("c").value;
+
+    c = c.replace(",", ".");
+
+    var i = document.getElementById("i").value;
+
+    i = i.replace(",", ".");
+
+    var t = document.getElementById("t").value;
+
+    t = t.replace(",", ".");
+
+    var m = c*Math.pow((1+(i/100)), t)+"";
+
+    document.getElementById("m").innerHTML = m;
+
+}
+
+
+</script>
+
+</html>
